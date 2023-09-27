@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App - Javascript Project</title>
     <link rel = "stylesheet" href = "style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     
@@ -14,7 +15,9 @@
         spellcheck=" false">
         <button><img src="images/search.png" alt="search.png"></button>
     </div>
-
+    <div class="error">
+        <p>Invalid city name</p>
+    </div>
     <div class="weather">
         <img src="images/rain.png" class="weather-icon">
         <h1 class="temp">22°c</h1>
@@ -38,5 +41,7 @@
         </div>
     </div>
  </div>
+
+
 </body>
 </html>
