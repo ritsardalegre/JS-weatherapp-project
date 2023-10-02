@@ -30,16 +30,37 @@ async function checkWeather(city){
     humidity.innerHTML = data.main.humidity + "%";
     wind.innerHTML = data.wind.speed + " km/h";
 
-    if (data.weather[0].main== "Clouds"){
-        weatherIcon.src = "images/clouds.png";
-    } else if (data.weather[0].main== "Clear"){
-        weatherIcon.src = "images/clear.png";
-    }else if (data.weather[0].main== "Rain"){
-        weatherIcon.src = "images/rain.png";
-    }else if (data.weather[0].main== "Drizzle"){
-        weatherIcon.src = "images/drizzle.png";
-    }else if (data.weather[0].main== "Mist"){
-        weatherIcon.src = "images/mist.png";
+    // if (data.weather[0].main== "Clouds"){
+    //     weatherIcon.src = "images/clouds.png";
+    // } else if (data.weather[0].main== "Clear"){
+    //     weatherIcon.src = "images/clear.png";
+    // }else if (data.weather[0].main== "Rain"){
+    //     weatherIcon.src = "images/rain.png";
+    // }else if (data.weather[0].main== "Drizzle"){
+    //     weatherIcon.src = "images/drizzle.png";
+    // }else if (data.weather[0].main== "Mist"){
+    //     weatherIcon.src = "images/mist.png";
+    // }
+
+    switch (data.weather[0].main) {
+        case "Clouds":
+            weatherIcon.src = "images/clouds.png";
+            break;
+        case "Clear":
+            weatherIcon.src = "images/clear.png";
+            break;
+        case "Rain":
+            weatherIcon.src = "images/rain.png";
+            break;
+        case "Drizzle":
+            weatherIcon.src = "images/drizzle.png";
+            break;
+        case "Mist":
+            weatherIcon.src = "images/mist.png";
+            break;
+        default:
+            console.log("Error Weather");
+        
     }
 
     // document.querySelector(".weather").style.display = "block";
